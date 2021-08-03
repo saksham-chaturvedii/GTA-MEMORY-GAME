@@ -1,0 +1,100 @@
+@font-face {
+  font-family: "pricedown";
+  src: url("./assets/pricedown.bl-regular.otf") format("opentype");
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* overflow: hidden; */
+}
+.bg {
+  background: url("./assets/bg.jpg");
+  height: 100vh;
+  width: 100vw;
+  z-index: 0;
+}
+
+.bg:after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(5, 5, 5, 0.808);
+}
+
+.title {
+  position: absolute;
+  left: 50%;
+  top: 4%;
+  width: max-content;
+  transform: translateX(-50%);
+  font-size: 4em;
+  color: whitesmoke;
+  font-family: "pricedown";
+  z-index: 1;
+  color: rgb(255, 153, 0);
+}
+.title:hover {
+  cursor: default;
+  transition: all 0.4s ease;
+  color: rgb(49, 49, 49);
+}
+
+.score {
+  position: absolute;
+  left: 54rem;
+  top: 10rem;
+  font-size: 0.75em;
+  width: fit-content;
+}
+.FlipsLeft {
+  position: relative;
+  left: 54rem;
+  top: 10rem;
+  font-size: 0.75em;
+  width: fit-content;
+}
+.container {
+  position: fixed;
+  top: 18%;
+  left: 10%;
+  width: 77vw;
+  height: 81vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  z-index: 1;
+  perspective: 1000px;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+}
+.image-card {
+  display: flex;
+  height: 15rem;
+  width: 13rem;
+  margin: 1rem 1rem;
+  transition: all 0.3s ease;
+  border-radius: 2%;
+  box-shadow: 1px 1px 8px 1px black;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+.front-card,
+.back-card {
+  position: absolute;
+}
+.back-card {
+  transform: rotateY(-180deg);
+}
+.flip {
+  transform: rotateY(-180deg);
+}
