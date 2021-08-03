@@ -22,4 +22,7 @@
 <br> ``OR`` <br>
 → User scores the total score of ``4`` before exhausting the total number of flips allowed
 
-https://user-images.githubusercontent.com/81289215/128074468-b691a10c-2aa7-4d59-9551-59c742966b7f.mov
+
+
+https://user-images.githubusercontent.com/81289215/128091829-d9124318-27fa-46b9-907b-be76fb2e24a2.mp4
+
