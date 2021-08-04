@@ -9,7 +9,6 @@ var score = 0;
 var flipsLeft = 8;
 
 function flipCard() {
-  
   if (statue) return; // if game statued, no flipping allowed
   if (this === firstCard) return; // handle double click on same card
 
@@ -26,7 +25,6 @@ function flipCard() {
   secondCard = this;
   document.getElementById("flip-sound").play();
   matchCard();
-  
 }
 
 function matchCard() {
@@ -36,7 +34,7 @@ function matchCard() {
     secondCard.removeEventListener("click", flipCard);
     score += 1;
     scoreText.innerHTML = `SCORE: ${score}/4`;
-    document.getElementById('score-inc').play();
+    document.getElementById("score-inc").play();
   } //unflip cards
   else {
     statue = true;
@@ -55,7 +53,6 @@ function matchCard() {
       alert("Game Over. Press 'Enter' or click 'OK' to play again.");
       window.location.reload();
     }, 500);
-    
   }
 }
 
@@ -94,7 +91,3 @@ function shuffle() {
   });
 }
 cards.forEach((card) => card.addEventListener("click", flipCard));
-
-//Number of chances to flip
-//Score
-//Play again
