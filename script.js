@@ -14,6 +14,7 @@ function flipCard() {
   if (this === firstCard) return; // handle double click on same card
 
   this.classList.add("flip");
+  document.getElementById("flip-sound").play();
   if (!flipped) {
     //not flipped
     flipped = true;
@@ -23,6 +24,7 @@ function flipCard() {
   //flipped
   flipped = false;
   secondCard = this;
+  document.getElementById("flip-sound").play();
   matchCard();
   
 }
@@ -34,6 +36,7 @@ function matchCard() {
     secondCard.removeEventListener("click", flipCard);
     score += 1;
     scoreText.innerHTML = `SCORE: ${score}/4`;
+    document.getElementById('score-inc').play();
   } //unflip cards
   else {
     statue = true;
@@ -47,6 +50,7 @@ function matchCard() {
   flipsLeft -= 1;
   FlipsLeftText.innerHTML = `FLIPS LEFT: ${flipsLeft}`;
   if (flipsLeft === 0 || score === 4) {
+    document.getElementById("game-over-sound").play();
     setTimeout(() => {
       alert("Game Over. Press 'Enter' or click 'OK' to play again.");
       window.location.reload();
